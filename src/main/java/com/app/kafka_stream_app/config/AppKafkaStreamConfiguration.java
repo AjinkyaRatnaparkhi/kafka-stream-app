@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsConfig;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -21,7 +22,7 @@ import com.app.kafka_stream_app.model.Stock;
 @EnableKafka
 @EnableKafkaStreams
 public class AppKafkaStreamConfiguration {
-	
+
 	@Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
 	KafkaStreamsConfiguration kafkaStreamConfiguration() {
 		   Map<String, Object> props = new HashMap<>();
