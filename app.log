@@ -1,0 +1,746 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.3.3)[0;39m
+
+[2m2025-01-04T15:05:42.014-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mc.a.k.KafkaStreamAppApplication         [0;39m [2m:[0;39m Starting KafkaStreamAppApplication using Java 17.0.10 with PID 29661 (/Users/shraddhazarkar/Home/sbws/kafka-stream-app/target/classes started by shraddhazarkar in /Users/shraddhazarkar/Home/sbws/kafka-stream-app)
+[2m2025-01-04T15:05:42.016-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mc.a.k.KafkaStreamAppApplication         [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2025-01-04T15:05:42.570-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port 8080 (http)
+[2m2025-01-04T15:05:42.579-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2025-01-04T15:05:42.579-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2m2025-01-04T15:05:42.607-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2025-01-04T15:05:42.608-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 567 ms
+[2m2025-01-04T15:05:42.710-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36morg.apache.kafka.streams.StreamsConfig  [0;39m [2m:[0;39m StreamsConfig values: 
+	acceptable.recovery.lag = 10000
+	application.id = kafka-streams-app
+	application.server = 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	buffered.records.per.partition = 1000
+	built.in.metrics.version = latest
+	cache.max.bytes.buffering = 10485760
+	client.id = 
+	commit.interval.ms = 30000
+	connections.max.idle.ms = 540000
+	default.client.supplier = class org.apache.kafka.streams.processor.internals.DefaultKafkaClientSupplier
+	default.deserialization.exception.handler = class org.apache.kafka.streams.errors.LogAndFailExceptionHandler
+	default.dsl.store = rocksDB
+	default.key.serde = class org.apache.kafka.common.serialization.Serdes$StringSerde
+	default.list.key.serde.inner = null
+	default.list.key.serde.type = null
+	default.list.value.serde.inner = null
+	default.list.value.serde.type = null
+	default.production.exception.handler = class org.apache.kafka.streams.errors.DefaultProductionExceptionHandler
+	default.timestamp.extractor = class org.apache.kafka.streams.processor.FailOnInvalidTimestamp
+	default.value.serde = class org.apache.kafka.common.serialization.Serdes$WrapperSerde
+	dsl.store.suppliers.class = class org.apache.kafka.streams.state.BuiltInDslStoreSuppliers$RocksDBDslStoreSuppliers
+	enable.metrics.push = true
+	max.task.idle.ms = 0
+	max.warmup.replicas = 2
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	num.standby.replicas = 0
+	num.stream.threads = 1
+	poll.ms = 100
+	probing.rebalance.interval.ms = 600000
+	processing.guarantee = at_least_once
+	rack.aware.assignment.non_overlap_cost = null
+	rack.aware.assignment.strategy = none
+	rack.aware.assignment.tags = []
+	rack.aware.assignment.traffic_cost = null
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	repartition.purge.interval.ms = 30000
+	replication.factor = -1
+	request.timeout.ms = 40000
+	retries = 0
+	retry.backoff.ms = 100
+	rocksdb.config.setter = null
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	state.cleanup.delay.ms = 600000
+	state.dir = /var/folders/br/0mtg57pd3ys71g4l09hx5lt00000gn/T//kafka-streams
+	statestore.cache.max.bytes = 10485760
+	task.timeout.ms = 300000
+	topology.optimization = none
+	upgrade.from = null
+	window.size.ms = null
+	windowed.inner.class.serde = null
+	windowstore.changelog.additional.retention.ms = 86400000
+
+[2m2025-01-04T15:05:42.942-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port 8080 (http) with context path '/'
+[2m2025-01-04T15:05:42.945-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36morg.apache.kafka.streams.StreamsConfig  [0;39m [2m:[0;39m StreamsConfig values: 
+	acceptable.recovery.lag = 10000
+	application.id = kafka-streams-app
+	application.server = 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	buffered.records.per.partition = 1000
+	built.in.metrics.version = latest
+	cache.max.bytes.buffering = 10485760
+	client.id = 
+	commit.interval.ms = 30000
+	connections.max.idle.ms = 540000
+	default.client.supplier = class org.apache.kafka.streams.processor.internals.DefaultKafkaClientSupplier
+	default.deserialization.exception.handler = class org.apache.kafka.streams.errors.LogAndFailExceptionHandler
+	default.dsl.store = rocksDB
+	default.key.serde = class org.apache.kafka.common.serialization.Serdes$StringSerde
+	default.list.key.serde.inner = null
+	default.list.key.serde.type = null
+	default.list.value.serde.inner = null
+	default.list.value.serde.type = null
+	default.production.exception.handler = class org.apache.kafka.streams.errors.DefaultProductionExceptionHandler
+	default.timestamp.extractor = class org.apache.kafka.streams.processor.FailOnInvalidTimestamp
+	default.value.serde = class org.apache.kafka.common.serialization.Serdes$WrapperSerde
+	dsl.store.suppliers.class = class org.apache.kafka.streams.state.BuiltInDslStoreSuppliers$RocksDBDslStoreSuppliers
+	enable.metrics.push = true
+	max.task.idle.ms = 0
+	max.warmup.replicas = 2
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	num.standby.replicas = 0
+	num.stream.threads = 1
+	poll.ms = 100
+	probing.rebalance.interval.ms = 600000
+	processing.guarantee = at_least_once
+	rack.aware.assignment.non_overlap_cost = null
+	rack.aware.assignment.strategy = none
+	rack.aware.assignment.tags = []
+	rack.aware.assignment.traffic_cost = null
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	repartition.purge.interval.ms = 30000
+	replication.factor = -1
+	request.timeout.ms = 40000
+	retries = 0
+	retry.backoff.ms = 100
+	rocksdb.config.setter = null
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	state.cleanup.delay.ms = 600000
+	state.dir = /var/folders/br/0mtg57pd3ys71g4l09hx5lt00000gn/T//kafka-streams
+	statestore.cache.max.bytes = 10485760
+	task.timeout.ms = 300000
+	topology.optimization = none
+	upgrade.from = null
+	window.size.ms = null
+	windowed.inner.class.serde = null
+	windowstore.changelog.additional.retention.ms = 86400000
+
+[2m2025-01-04T15:05:42.963-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.clients.admin.AdminClientConfig   [0;39m [2m:[0;39m AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-admin
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[2m2025-01-04T15:05:42.997-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka version: 3.7.1
+[2m2025-01-04T15:05:42.997-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka commitId: e2494e6ffb89f828
+[2m2025-01-04T15:05:42.997-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka startTimeMs: 1736021142996
+[2m2025-01-04T15:05:42.999-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] Kafka Streams version: 3.7.1
+[2m2025-01-04T15:05:42.999-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] Kafka Streams commit ID: e2494e6ffb89f828
+[2m2025-01-04T15:05:43.007-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Creating restore consumer client
+[2m2025-01-04T15:05:43.009-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.clients.consumer.ConsumerConfig   [0;39m [2m:[0;39m ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = none
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-restore-consumer
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = null
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = false
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+[2m2025-01-04T15:05:43.034-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.c.t.i.KafkaMetricsCollector       [0;39m [2m:[0;39m initializing Kafka metrics collector
+[2m2025-01-04T15:05:43.063-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka version: 3.7.1
+[2m2025-01-04T15:05:43.063-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka commitId: e2494e6ffb89f828
+[2m2025-01-04T15:05:43.064-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka startTimeMs: 1736021143063
+[2m2025-01-04T15:05:43.070-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Creating thread producer client
+[2m2025-01-04T15:05:43.073-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.clients.producer.ProducerConfig   [0;39m [2m:[0;39m ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-producer
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 100
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+[2m2025-01-04T15:05:43.074-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.c.t.i.KafkaMetricsCollector       [0;39m [2m:[0;39m initializing Kafka metrics collector
+[2m2025-01-04T15:05:43.080-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.clients.producer.KafkaProducer    [0;39m [2m:[0;39m [Producer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-producer] Instantiated an idempotent producer.
+[2m2025-01-04T15:05:43.090-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka version: 3.7.1
+[2m2025-01-04T15:05:43.090-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka commitId: e2494e6ffb89f828
+[2m2025-01-04T15:05:43.090-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka startTimeMs: 1736021143090
+[2m2025-01-04T15:05:43.094-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Creating consumer client
+[2m2025-01-04T15:05:43.096-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.clients.consumer.ConsumerConfig   [0;39m [2m:[0;39m ConsumerConfig values: 
+	allow.auto.create.topics = false
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = kafka-streams-app
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = false
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+[2m2025-01-04T15:05:43.100-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.c.t.i.KafkaMetricsCollector       [0;39m [2m:[0;39m initializing Kafka metrics collector
+[2m2025-01-04T15:05:43.107-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.s.p.i.a.AssignorConfiguration     [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Cooperative rebalancing protocol is enabled now
+[2m2025-01-04T15:05:43.117-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.k.clients.consumer.ConsumerConfig   [0;39m [2m:[0;39m These configurations '[replication.factor, probing.rebalance.interval.ms, max.warmup.replicas, acceptable.recovery.lag, rack.aware.assignment.non_overlap_cost, application.server, rack.aware.assignment.strategy, rack.aware.assignment.traffic_cost, windowstore.changelog.additional.retention.ms, num.standby.replicas, upgrade.from, rack.aware.assignment.tags, application.id]' were supplied but are not used yet.
+[2m2025-01-04T15:05:43.117-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka version: 3.7.1
+[2m2025-01-04T15:05:43.117-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka commitId: e2494e6ffb89f828
+[2m2025-01-04T15:05:43.117-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka startTimeMs: 1736021143117
+[2m2025-01-04T15:05:43.121-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] State transition from CREATED to REBALANCING
+[2m2025-01-04T15:05:43.122-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] Started 1 stream threads
+[2m2025-01-04T15:05:43.122-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Starting
+[2m2025-01-04T15:05:43.122-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] State transition from CREATED to STARTING
+[2m2025-01-04T15:05:43.123-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.LegacyKafkaConsumer [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Subscribed to topic(s): stock-in-topic
+[2m2025-01-04T15:05:43.129-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [           main][0;39m [2m[0;39m[36mc.a.k.KafkaStreamAppApplication         [0;39m [2m:[0;39m Started KafkaStreamAppApplication in 1.341 seconds (process running for 1.778)
+[2m2025-01-04T15:05:43.215-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [read-1-producer][0;39m [2m[0;39m[36morg.apache.kafka.clients.Metadata       [0;39m [2m:[0;39m [Producer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-producer] Cluster ID: QSOWZiTbTMajWxmZzR4f-A
+[2m2025-01-04T15:05:43.215-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36morg.apache.kafka.clients.Metadata       [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Cluster ID: QSOWZiTbTMajWxmZzR4f-A
+[2m2025-01-04T15:05:43.228-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Processed 0 total records, ran 0 punctuators, and committed 0 total tasks since the last update
+[2m2025-01-04T15:05:43.250-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [read-1-producer][0;39m [2m[0;39m[36mo.a.k.c.p.internals.TransactionManager  [0;39m [2m:[0;39m [Producer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-producer] ProducerId set to 0 with epoch 0
+[2m2025-01-04T15:05:43.967-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Discovered group coordinator shraddhas-mbp:9092 (id: 2147483647 rack: null)
+[2m2025-01-04T15:05:43.969-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] (Re-)joining group
+[2m2025-01-04T15:05:43.993-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Request joining group due to: need to re-join with the given member-id: kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0
+[2m2025-01-04T15:05:43.993-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] (Re-)joining group
+[2m2025-01-04T15:05:44.007-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Successfully joined group with generation Generation{generationId=1, memberId='kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0', protocol='stream'}
+[2m2025-01-04T15:05:44.080-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.RepartitionTopics   [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Skipping the repartition topic validation since there are no repartition topics.
+[2m2025-01-04T15:05:44.085-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] 1 client nodes and Optional[1] consumers participating in this rebalance: 
+a1272040-d878-4b2a-95e5-0d4d7623deca: [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0].
+[2m2025-01-04T15:05:44.085-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Assigning stateful tasks: []
+and stateless tasks: [0_2, 0_1, 0_0]
+[2m2025-01-04T15:05:44.088-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36ma.k.s.p.i.a.HighAvailabilityTaskAssignor[0;39m [2m:[0;39m Decided on assignment: {a1272040-d878-4b2a-95e5-0d4d7623deca=[activeTasks: ([0_0, 0_1, 0_2]) standbyTasks: ([]) prevActiveTasks: ([]) prevStandbyTasks: ([]) changelogOffsetTotalsByTask: ([]) taskLagTotals: ([]) clientTags: ([]) capacity: 1 assigned: 3]} with no followup probing rebalance.
+[2m2025-01-04T15:05:44.088-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Assigned 3 total tasks including 0 stateful tasks to 1 client nodes.
+[2m2025-01-04T15:05:44.088-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Assignment of tasks to nodes: a1272040-d878-4b2a-95e5-0d4d7623deca=[activeTasks: ([0_0, 0_1, 0_2]) standbyTasks: ([])]
+[2m2025-01-04T15:05:44.091-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Client a1272040-d878-4b2a-95e5-0d4d7623deca per-consumer assignment:
+	prev owned active {}
+	prev owned standby {kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0=[]}
+	assigned active {kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0=[0_2, 0_1, 0_0]}
+	revoking active {}
+	assigned standby {}
+
+[2m2025-01-04T15:05:44.091-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] Finished stable assignment of tasks, no followup rebalances required.
+[2m2025-01-04T15:05:44.091-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Finished assignment for group at generation 1: {kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0=Assignment(partitions=[stock-in-topic-0, stock-in-topic-1, stock-in-topic-2], userDataSize=76)}
+[2m2025-01-04T15:05:44.130-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Successfully synced group in generation Generation{generationId=1, memberId='kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer-477b4dbb-22d0-45e4-a9b3-33eedcb3e9d0', protocol='stream'}
+[2m2025-01-04T15:05:44.131-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Updating assignment with
+	Assigned partitions:                       [stock-in-topic-0, stock-in-topic-1, stock-in-topic-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [stock-in-topic-0, stock-in-topic-1, stock-in-topic-2]
+	Revoked partitions (owned - assigned):     []
+
+[2m2025-01-04T15:05:44.131-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Notifying assignor about the new Assignment(partitions=[stock-in-topic-0, stock-in-topic-1, stock-in-topic-2], userDataSize=76)
+[2m2025-01-04T15:05:44.131-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.i.StreamsPartitionAssignor    [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer] No followup rebalance was requested, resetting the rebalance schedule.
+[2m2025-01-04T15:05:44.132-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.TaskManager [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Handle new assignment with:
+	New active tasks: [0_2, 0_1, 0_0]
+	New standby tasks: []
+	Existing active tasks: []
+	Existing standby tasks: []
+[2m2025-01-04T15:05:44.148-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mk.c.c.i.ConsumerRebalanceListenerInvoker[0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Adding newly assigned partitions: stock-in-topic-0, stock-in-topic-1, stock-in-topic-2
+[2m2025-01-04T15:05:44.148-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] State transition from STARTING to PARTITIONS_ASSIGNED
+[2m2025-01-04T15:05:44.159-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Found no committed offset for partition stock-in-topic-0
+[2m2025-01-04T15:05:44.159-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Found no committed offset for partition stock-in-topic-1
+[2m2025-01-04T15:05:44.159-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Found no committed offset for partition stock-in-topic-2
+[2m2025-01-04T15:05:44.170-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.SubscriptionState   [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Resetting offset for partition stock-in-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[shraddhas-mbp:9092 (id: 0 rack: null)], epoch=0}}.
+[2m2025-01-04T15:05:44.171-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.SubscriptionState   [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Resetting offset for partition stock-in-topic-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[shraddhas-mbp:9092 (id: 0 rack: null)], epoch=0}}.
+[2m2025-01-04T15:05:44.171-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.SubscriptionState   [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Resetting offset for partition stock-in-topic-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[shraddhas-mbp:9092 (id: 0 rack: null)], epoch=0}}.
+[2m2025-01-04T15:05:44.194-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_0] Initialized
+[2m2025-01-04T15:05:44.195-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_2] Initialized
+[2m2025-01-04T15:05:44.195-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_1] Initialized
+[2m2025-01-04T15:05:44.197-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Found no committed offset for partition stock-in-topic-0
+[2m2025-01-04T15:05:44.200-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_0] Restored and ready to run
+[2m2025-01-04T15:05:44.203-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Found no committed offset for partition stock-in-topic-2
+[2m2025-01-04T15:05:44.204-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_2] Restored and ready to run
+[2m2025-01-04T15:05:44.205-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.ConsumerCoordinator [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Found no committed offset for partition stock-in-topic-1
+[2m2025-01-04T15:05:44.205-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_1] Restored and ready to run
+[2m2025-01-04T15:05:44.206-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Restoration took 58 ms for all active tasks [0_2, 0_1, 0_0]
+[2m2025-01-04T15:05:44.206-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] State transition from PARTITIONS_ASSIGNED to RUNNING
+[2m2025-01-04T15:05:44.207-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] State transition from REBALANCING to RUNNING
+[2m2025-01-04T15:05:44.207-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.LegacyKafkaConsumer [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Requesting the log end offset for stock-in-topic-0 in order to compute lag
+[2m2025-01-04T15:05:44.208-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.LegacyKafkaConsumer [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Requesting the log end offset for stock-in-topic-1 in order to compute lag
+[2m2025-01-04T15:05:44.208-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.LegacyKafkaConsumer [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer, groupId=kafka-streams-app] Requesting the log end offset for stock-in-topic-2 in order to compute lag
+[2m2025-01-04T15:06:47.548-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2025-01-04T15:06:47.548-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2025-01-04T15:06:47.551-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 3 ms
+[2m2025-01-04T15:06:47.600-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.k.clients.producer.ProducerConfig   [0;39m [2m:[0;39m ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2m2025-01-04T15:06:47.601-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.k.c.t.i.KafkaMetricsCollector       [0;39m [2m:[0;39m initializing Kafka metrics collector
+[2m2025-01-04T15:06:47.602-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.k.clients.producer.KafkaProducer    [0;39m [2m:[0;39m [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2m2025-01-04T15:06:47.604-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka version: 3.7.1
+[2m2025-01-04T15:06:47.604-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka commitId: e2494e6ffb89f828
+[2m2025-01-04T15:06:47.604-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [nio-8080-exec-2][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m Kafka startTimeMs: 1736021207604
+[2m2025-01-04T15:06:47.609-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [ad | producer-1][0;39m [2m[0;39m[36morg.apache.kafka.clients.Metadata       [0;39m [2m:[0;39m [Producer clientId=producer-1] Cluster ID: QSOWZiTbTMajWxmZzR4f-A
+[2m2025-01-04T15:06:47.610-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [ad | producer-1][0;39m [2m[0;39m[36mo.a.k.c.p.internals.TransactionManager  [0;39m [2m:[0;39m [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+ Key msft , value Stock [name=msft, lastRefreshed=1970-01-01T00:00:18Z, currentValue=350, volume=500, index=sensex]
+ update message Key msft , value Stock [name=MSFT, lastRefreshed=1970-01-01T00:00:18Z, currentValue=350, volume=500, index=sensex]
+[2m2025-01-04T15:07:43.273-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Processed 1 total records, ran 0 punctuators, and committed 1 total tasks since the last update
+[2m2025-01-04T15:08:18.446-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [on(6)-127.0.0.1][0;39m [2m[0;39m[36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2025-01-04T15:08:18.451-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [on(6)-127.0.0.1][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] State transition from RUNNING to PENDING_SHUTDOWN
+[2m2025-01-04T15:08:18.453-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Informed to shut down
+[2m2025-01-04T15:08:18.453-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] State transition from RUNNING to PENDING_SHUTDOWN
+[2m2025-01-04T15:08:18.453-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] Shutting down 1 stream threads
+[2m2025-01-04T15:08:18.456-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Shutting down clean
+[2m2025-01-04T15:08:18.459-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_0] Suspended from RUNNING
+[2m2025-01-04T15:08:18.461-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.RecordCollectorImpl [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] stream-task [0_0] Closing record collector clean
+[2m2025-01-04T15:08:18.461-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_0] Closed clean
+[2m2025-01-04T15:08:18.461-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_1] Suspended from RUNNING
+[2m2025-01-04T15:08:18.462-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.RecordCollectorImpl [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] stream-task [0_1] Closing record collector clean
+[2m2025-01-04T15:08:18.462-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_1] Closed clean
+[2m2025-01-04T15:08:18.462-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_2] Suspended from RUNNING
+[2m2025-01-04T15:08:18.462-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.RecordCollectorImpl [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] stream-task [0_2] Closing record collector clean
+[2m2025-01-04T15:08:18.462-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.StreamTask  [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] task [0_2] Closed clean
+[2m2025-01-04T15:08:18.462-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.clients.producer.KafkaProducer    [0;39m [2m:[0;39m [Producer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-producer] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[2m2025-01-04T15:08:18.466-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics scheduler closed
+[2m2025-01-04T15:08:18.466-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2m2025-01-04T15:08:18.466-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+[2m2025-01-04T15:08:18.466-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics reporters closed
+[2m2025-01-04T15:08:18.466-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m App info kafka.producer for kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-producer unregistered
+[2m2025-01-04T15:08:18.466-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.processor.internals.TaskManager [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Shutdown complete
+[2m2025-01-04T15:08:18.467-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.c.c.internals.LegacyKafkaConsumer [0;39m [2m:[0;39m [Consumer clientId=kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-restore-consumer, groupId=null] Unsubscribed all topics or patterns and assigned partitions
+[2m2025-01-04T15:08:18.583-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics scheduler closed
+[2m2025-01-04T15:08:18.584-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2m2025-01-04T15:08:18.584-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+[2m2025-01-04T15:08:18.584-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics reporters closed
+[2m2025-01-04T15:08:18.586-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m App info kafka.consumer for kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-consumer unregistered
+[2m2025-01-04T15:08:18.586-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics scheduler closed
+[2m2025-01-04T15:08:18.586-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2m2025-01-04T15:08:18.586-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+[2m2025-01-04T15:08:18.586-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics reporters closed
+[2m2025-01-04T15:08:18.587-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m App info kafka.consumer for kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1-restore-consumer unregistered
+[2m2025-01-04T15:08:18.587-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] State transition from PENDING_SHUTDOWN to DEAD
+[2m2025-01-04T15:08:18.587-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [-StreamThread-1][0;39m [2m[0;39m[36mo.a.k.s.p.internals.StreamThread        [0;39m [2m:[0;39m stream-thread [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-StreamThread-1] Shutdown complete
+[2m2025-01-04T15:08:18.587-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] Shutdown 1 stream threads complete
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [d7623deca-admin][0;39m [2m[0;39m[36mo.a.kafka.common.utils.AppInfoParser    [0;39m [2m:[0;39m App info kafka.admin.client for kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca-admin unregistered
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [d7623deca-admin][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics scheduler closed
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [d7623deca-admin][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [d7623deca-admin][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics reporters closed
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics scheduler closed
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36mo.apache.kafka.common.metrics.Metrics   [0;39m [2m:[0;39m Metrics reporters closed
+[2m2025-01-04T15:08:18.588-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [eca-CloseThread][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] State transition from PENDING_SHUTDOWN to NOT_RUNNING
+[2m2025-01-04T15:08:18.589-05:00[0;39m [32m INFO[0;39m [35m29661[0;39m [2m---[0;39m [2m[kafka-stream-app] [on(6)-127.0.0.1][0;39m [2m[0;39m[36morg.apache.kafka.streams.KafkaStreams   [0;39m [2m:[0;39m stream-client [kafka-streams-app-a1272040-d878-4b2a-95e5-0d4d7623deca] Streams client stopped completely
