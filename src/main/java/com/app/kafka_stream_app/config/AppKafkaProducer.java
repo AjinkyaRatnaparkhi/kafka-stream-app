@@ -43,7 +43,8 @@ public class AppKafkaProducer {
 
 		public void publishData() {
 	        Map<String, Stock> data = getMockData();
-	            while (true) {
+				int counter= 1;
+	            while (counter < 5) {
 	                data.forEach((key, value) -> {
 	                    value.setCurrentValue(value.getCurrentValue() + (long) (Math.random() * (30 + 30)) - 30);
 	                    value.setVolume(value.getVolume() + (long) (Math.random() * (200 - 20)) + 20);
@@ -63,13 +64,13 @@ public class AppKafkaProducer {
 	                    producer.send(new ProducerRecord<>("stock-in-topic", key, value));
 	                    producer.flush();
 
-
 	                });
 	               try {
 	            	   Thread.sleep(5000L);
 	               } catch (InterruptedException e) {
 	                   e.printStackTrace();
 	               }
+				   counter++;
 	            }
 	    }
 
